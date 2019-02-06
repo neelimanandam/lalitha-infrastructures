@@ -18,7 +18,7 @@
         </v-card-text>
 
         <v-card-actions>
-          <v-btn flat color="orange">Login</v-btn>
+          <v-btn flat color="info" fab>Login</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
