@@ -1,56 +1,65 @@
 <template>
   <v-app>
+    <v-toolbar app>
+      <v-toolbar-side-icon />
+      <v-flex xs2>
+        <v-img src="/images/logo.jpg" height="50px" width="50px" />
+      </v-flex>
+      <v-spacer />
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn flat>
+          Home
+        </v-btn>
+        <v-btn flat>
+          About Us
+        </v-btn>
+        <v-btn flat>
+          Projects
+        </v-btn>
+        <v-btn flat>
+          Contact Us
+        </v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
     <v-content>
-      <v-toolbar>
-        <v-toolbar-side-icon/>
-        <v-toolbar-title>Lalitha Infrastructures</v-toolbar-title>
-        <v-spacer/>
-        <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn flat>Home</v-btn>
-          <v-btn flat>About Us</v-btn>
-          <v-btn flat>Projects</v-btn>
-          <v-btn flat>Contact Us</v-btn>
-        </v-toolbar-items>
-      </v-toolbar>
-      <nuxt/>
-      <v-footer>
-        <v-container>
-          <v-card>
-            <v-card-text>
-              <h1 class="text-xs-center">Contact Us</h1>
-            </v-card-text>
-          </v-card>
+      <v-container fluid>
+        <nuxt />
+      </v-container>
+    </v-content>
+    <v-footer dark height="auto">
+      <v-card class="flex" flat tile>
+        <v-card-title class="teal">
+          <strong class="subheading">
+            <h2>Contact Us</h2>
+          </strong>
+        </v-card-title>
 
-          <v-card color="primary">
-            <v-layout row="2">
-              <v-flex xs6>
-                <v-card-text class="text-xs-center">
-                  <v-icon>room</v-icon>Srivijaya lakshmi vastralayam,
-                  <br>Main Road
-                  <br>Vuyyuru
-                  <br>
-                  <v-icon>phone</v-icon>7799416832.
-                </v-card-text>
-              </v-flex>
-
-              <v-flex xs6>
+        <v-layout row wrap>
+          <v-container>
+            <v-flex xs12>
+              <responsive>
                 <GmapMap
                   :center="{lat:16.355242, lng:80.836730}"
                   :zoom="7"
                   map-type-id="terrain"
-                  style="width: 500px; height: 300px"
+                  style="width: 100%; height: 500px"
                 >
                   <GmapMarker
                     ref="Lalitha Infrastructures"
-                    :position="google && new google.maps.LatLng(16.355242, 80.836730)"
-                 />
+                    :position="{lat:16.355242, lng:80.836730}"
+                  />
                 </GmapMap>
-              </v-flex>
-            </v-layout>
-          </v-card>
-        </v-container>
-      </v-footer>
-    </v-content>
+              </responsive>
+            </v-flex>
+          </v-container>
+        </v-layout>
+
+        <v-card-actions class="grey darken-3 justify-center">
+          &copy;2018 —
+          <strong>Lalitha Infrastructures</strong>
+        </v-card-actions>
+      </v-card>
+    </v-footer>
   </v-app>
 </template>
 <script>
@@ -63,5 +72,17 @@ Vue.use(VueGoogleMaps, {
     libraries: 'places'
   }
 })
-export default {}
+export default {
+  data: function() {
+    return {
+      icons: [
+        'fab fa-facebook',
+        'fab fa-twitter',
+        'fab fa-google-plus',
+        'fab fa-linkedin',
+        'fab fa-instagram'
+      ]
+    }
+  }
+}
 </script>
