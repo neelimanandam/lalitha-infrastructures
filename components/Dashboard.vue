@@ -1,23 +1,29 @@
 <template>
   <div>
-    <v-carousel>
-      <v-carousel-item key="0">
-        <v-img src="/images/image4.jpg" />
-      </v-carousel-item>
-  
-      <v-carousel-item key="1">
-        <v-img src="/images/image0.jpg" />
-      </v-carousel-item>
-      <v-carousel-item key="2">
-        <v-img src="/images/image1.jpg" />
-      </v-carousel-item>
-      <v-carousel-item key="3">
-        <v-img src="/images/image2.jpg" />
-      </v-carousel-item>
-      <v-carousel-item key="4">
-        <v-img src="/images/image3.jpg" />
-      </v-carousel-item>
-    </v-carousel>
+    <v-layout row wrap>
+      <v-flex xs12>
+        <v-responsive>
+          <v-carousel height="100%">
+            <v-carousel-item key="0">
+              <v-img style="height:100%" src="/images/image4.jpg" />
+            </v-carousel-item>
+
+            <v-carousel-item key="1">
+              <v-img src="/images/image0.jpg" />
+            </v-carousel-item>
+            <v-carousel-item key="2">
+              <v-img src="/images/image1.jpg" />
+            </v-carousel-item>
+            <v-carousel-item key="3">
+              <v-img src="/images/image2.jpg" />
+            </v-carousel-item>
+            <v-carousel-item key="4">
+              <v-img src="/images/image3.jpg" />
+            </v-carousel-item>
+          </v-carousel>
+        </v-responsive>
+      </v-flex>
+    </v-layout>
     <v-spacer />
     <v-container>
       <v-card>
@@ -39,15 +45,32 @@
       </v-card-text>
 
       <v-card>
-        <v-layout row="2">
-          <v-flex xs6>
+        <v-layout row wrap>
+          <v-flex md6 xs12>
             <v-card-media src="/images/nstowers.jpg" />
           </v-flex>
 
-          <v-flex xs6>
-            <v-card-text>
-              <h3>The founders of the company have a decade of specialized experience in development and construction of residential flats across Andhra Pradesh and Hyderabad. The company has grown from strength to strength, having successfully completed 20 prestigious projects of open residential land and residential apartments within Hyderabad and Andhra Pradesh.</h3>
-            </v-card-text>
+          <v-flex md6 xs12>
+            <v-data-table :headers="headers" :items="desserts" class="elevation-1">
+              <template slot="items" slot-scope="props">
+                <td>{{ props.item.name }}</td>
+                <td class="text-xs-right">
+                  1
+                </td>
+                <td class="text-xs-right">
+                  2
+                </td>
+                <td class="text-xs-right">
+                  3
+                </td>
+                <td class="text-xs-right">
+                  4
+                </td>
+                <td class="text-xs-right">
+                  5
+                </td>
+              </template>
+            </v-data-table>
           </v-flex>
         </v-layout>
       </v-card>

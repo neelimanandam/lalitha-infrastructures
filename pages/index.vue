@@ -1,13 +1,13 @@
 <template>
-  <login />
+  <dashboard />
 </template>
 
 <script>
-import Login from '~/components/Login'
+import Dashboard from '~/components/Dashboard'
 export default {
   components: {
-    Login
+    Dashboard
   },
-  layout: 'noNavigation'
+  layout: 'default'
 }
 </script>

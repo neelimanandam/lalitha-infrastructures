@@ -3,11 +3,20 @@
   <v-content align-center justify-center>
     <v-container fill-height>
       <v-layout>
-        <v-flex xs6 offset-xs3>
+        <v-flex
+          xs12
+          md6
+          sm10
+          xl6
+          offset-xs0
+          offset-md3
+          offset-sm1
+          offset-xl3
+        >
           <v-card>
             <v-card-title primary-title :style="headerStyle">
               <div>
-                <h3 class="headline mb-0">
+                <h3>
                   <v-icon large>
                     location_city
                   </v-icon>
