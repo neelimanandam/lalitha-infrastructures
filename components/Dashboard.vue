@@ -49,11 +49,11 @@
                 <v-layout row wrap>
                   <v-flex v-for="n in tabledata" :key="n.id" xs4>
                     <v-card-text>
-                      {{ n.heading }}
+                      <h3>{{ n.heading }}</h3>
                       <v-spacer />
                       {{ n.message1 }}
                       <v-spacer />
-                      {{ n.subheading }}
+                      <h3>{{ n.subheading }}</h3>
                       <v-spacer />
                       {{ n.message2 }}
                     </v-card-text>
