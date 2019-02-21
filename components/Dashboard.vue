@@ -1,27 +1,26 @@
 <template>
   <div>
     <v-layout row wrap>
-      <v-flex xs12>
-        <v-responsive>
-          <v-carousel height="100%">
-            <v-carousel-item key="0">
-              <v-img style="height:100%" src="/images/image4.jpg" />
-            </v-carousel-item>
-
-            <v-carousel-item key="1">
-              <v-img src="/images/image0.jpg" />
-            </v-carousel-item>
-            <v-carousel-item key="2">
-              <v-img src="/images/image1.jpg" />
-            </v-carousel-item>
-            <v-carousel-item key="3">
-              <v-img src="/images/image2.jpg" />
-            </v-carousel-item>
-            <v-carousel-item key="4">
-              <v-img src="/images/image3.jpg" />
-            </v-carousel-item>
-          </v-carousel>
-        </v-responsive>
+      <v-flex xs12 md12>
+        <v-carousel height="100%">
+          <v-carousel-item v-for="image in images" :key="image.uid">
+            <v-img style="height:100%" :src="image.source">
+              <v-layout
+                row
+                fill-height
+                justify-start
+                align-end
+                class="title font-weight-light"
+              >
+                <v-flex xs-12>
+                  <h1 style="padding:100px">
+                    {{ image.text }}
+                  </h1>
+                </v-flex>
+              </v-layout>
+            </v-img>
+          </v-carousel-item>
+        </v-carousel>
       </v-flex>
     </v-layout>
     <v-spacer />
@@ -51,26 +50,11 @@
           </v-flex>
 
           <v-flex md6 xs12>
-            <v-data-table :headers="headers" :items="desserts" class="elevation-1">
-              <template slot="items" slot-scope="props">
-                <td>{{ props.item.name }}</td>
-                <td class="text-xs-right">
-                  1
-                </td>
-                <td class="text-xs-right">
-                  2
-                </td>
-                <td class="text-xs-right">
-                  3
-                </td>
-                <td class="text-xs-right">
-                  4
-                </td>
-                <td class="text-xs-right">
-                  5
-                </td>
-              </template>
-            </v-data-table>
+            <v-container v-bind="{ [`grid-list-${size}`]: true }" fluid>
+              <v-layout row wrap>
+                <v-flex v-for="n in 9" :key="n" xs4 />
+              </v-layout>
+            </v-container>
           </v-flex>
         </v-layout>
       </v-card>
@@ -92,7 +76,30 @@
 <script>
 export default {
   data: function() {
-    return {}
+    return {
+      images: [
+        {
+          source: '/images/image0.jpg',
+          uid: 0,
+          text: 'Enjoy the Heights of Luxury'
+        },
+        {
+          source: '/images/image1.jpg',
+          uid: 1,
+          text: 'A Unique Modern Concept'
+        },
+        {
+          source: '/images/image2.jpg',
+          uid: 2,
+          text: 'Elevates the Pride of Life'
+        },
+        {
+          source: '/images/image3.jpg',
+          uid: 3,
+          text: '2 & 3 BHK Luxury Apartments @Vuyyuru'
+        }
+      ]
+    }
   }
 }
 </script>
