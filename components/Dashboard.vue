@@ -33,17 +33,13 @@
     <v-container>
       <v-card-text>
         <h1 class="text-xs-center">
-          Our Projects
+          Specifications & Amenities
         </h1>
       </v-card-text>
 
       <v-card>
         <v-layout row wrap>
-          <v-flex md6 xs12>
-            <v-card-media src="/images/nstowers.jpg" />
-          </v-flex>
-
-          <v-flex md6 xs12>
+          <v-flex xs12>
             <v-card>
               <v-container v-bind="{ [`grid-list-${size}`]: true }" fluid>
                 <v-layout row wrap>
@@ -74,6 +70,31 @@
           <br>
           <br>
           <p>The founders of the company have a decade of specialized experience in development and construction of residential flats across Andhra Pradesh and Hyderabad. The company has grown from strength to strength, having successfully completed 20 prestigious projects of open residential land and residential apartments within Hyderabad and Andhra Pradesh.</p>
+        </v-card-text>
+      </v-card>
+    </v-container>
+
+    <v-container>
+      <v-card>
+        <v-card-text>
+          <h1 class="text-xs-center">
+            Contact Us
+          </h1>
+          <br>
+          <br>
+          <v-flex xs12>
+            <GmapMap
+              :center="{lat:16.355242, lng:80.836730}"
+              :zoom="7"
+              map-type-id="terrain"
+              style="width: 100%; height: 350px"
+            >
+              <GmapMarker
+                ref="Lalitha Infrastructures"
+                :position="{lat:16.355242, lng:80.836730}"
+              />
+            </GmapMap>
+          </v-flex>
         </v-card-text>
       </v-card>
     </v-container>
