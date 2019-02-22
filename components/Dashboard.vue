@@ -38,12 +38,19 @@
       </v-card-text>
 
       <v-card>
-        <v-layout row wrap>
+        <v-layout row wrap xs-column="2">
           <v-flex xs12>
             <v-card>
               <v-container v-bind="{ [`grid-list-${size}`]: true }" fluid>
                 <v-layout row wrap>
-                  <v-flex v-for="n in tabledata" :key="n.id" xs4>
+                  <v-flex
+                    v-for="n in tabledata"
+                    :key="n.id"
+                    xs6
+                    md4
+                    sm5
+                    xl3
+                  >
                     <v-card-text>
                       <h3>{{ n.heading }}</h3>
                       <v-spacer />
