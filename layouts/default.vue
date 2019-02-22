@@ -44,32 +44,6 @@
     </v-content>
     <v-footer dark height="auto">
       <v-card class="flex" flat tile>
-        <v-card-title class="teal">
-          <strong class="subheading">
-            <h2>Contact Us</h2>
-          </strong>
-        </v-card-title>
-
-        <v-layout row wrap>
-          <v-container>
-            <v-flex xs12>
-              <responsive>
-                <GmapMap
-                  :center="{lat:16.355242, lng:80.836730}"
-                  :zoom="7"
-                  map-type-id="terrain"
-                  style="width: 100%; height: 350px"
-                >
-                  <GmapMarker
-                    ref="Lalitha Infrastructures"
-                    :position="{lat:16.355242, lng:80.836730}"
-                  />
-                </GmapMap>
-              </responsive>
-            </v-flex>
-          </v-container>
-        </v-layout>
-
         <v-card-actions class="grey darken-3 justify-center">
           &copy;2018 —
           <strong>Lalitha Infrastructures</strong>
