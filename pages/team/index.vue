@@ -1,12 +1,12 @@
 <template>
-  <dashboard />
+  <team />
 </template>
 
 <script>
-import Dashboard from '~/components/Dashboard'
+import Team from '~/components/Team'
 export default {
   components: {
-    Dashboard
+    Team
   },
   layout: 'default'
 }

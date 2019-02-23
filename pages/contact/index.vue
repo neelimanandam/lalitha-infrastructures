@@ -1,12 +1,12 @@
 <template>
-  <dashboard />
+  <contact-us />
 </template>
 
 <script>
-import Dashboard from '~/components/Dashboard'
+import ContactUs from '~/components/ContactUs'
 export default {
   components: {
-    Dashboard
+    ContactUs
   },
   layout: 'default'
 }
