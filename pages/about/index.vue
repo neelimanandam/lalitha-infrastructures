@@ -1,12 +1,12 @@
 <template>
-  <dashboard />
+  <about-us />
 </template>
 
 <script>
-import Dashboard from '~/components/Dashboard'
+import AboutUs from '~/components/AboutUs'
 export default {
   components: {
-    Dashboard
+    AboutUs
   },
   layout: 'default'
 }
