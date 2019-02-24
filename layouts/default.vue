@@ -63,7 +63,7 @@ import Vue from 'vue'
 
 Vue.use(VueGoogleMaps, {
   load: {
-    key: 'AIzaSyAIeXIsUJSMAbthIZwbkL3_jFhkgiH_nUI',
+    key: 'AIzaSyCZtdWUqRMcZz9MH0JLPKv7auufuknqGKE',
     libraries: 'places'
   }
 })
