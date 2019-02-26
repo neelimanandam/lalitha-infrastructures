@@ -43,7 +43,7 @@
             <span class="title">Parking Plan</span>
           </v-card-title>
           <v-card-text>
-            <v-img src="/images/parkingPlan.png" style="max-width:500px;height:500px;" />
+            <v-img src="/images/parkingPlan.png" style="max-width:400px;height:auto;" />
           </v-card-text>
         </v-card>
       </v-flex>
