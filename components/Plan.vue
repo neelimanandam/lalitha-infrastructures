@@ -40,7 +40,7 @@
 
     <v-layout row wrap>
       <v-flex md6 xs12 sm12 xl6>
-        <v-card max-height="500px" flat>
+        <v-card max-height="430px" flat>
           <v-card-title>
             <span class="title">
               Parking Plan
