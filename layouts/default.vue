@@ -34,8 +34,8 @@
         <v-btn flat to="/specs">
           Specs
         </v-btn>
-        <v-btn flat to="/team">
-          Team
+        <v-btn flat to="/plan">
+          Plan
         </v-btn>
         <v-btn flat to="/contact">
           Contact Us
@@ -82,7 +82,7 @@ export default {
         { title: 'Home', link: '/dashboard' },
         { title: 'About Us', link: '/about' },
         { title: 'Specs', link: '/specs' },
-        { title: 'Team', link: '/team' },
+        { title: 'Plan', link: '/plan' },
         { title: 'Contact Us', link: '/contact' }
       ]
     }

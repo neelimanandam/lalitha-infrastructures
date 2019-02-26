@@ -4,7 +4,9 @@
       <v-flex md6 xs12 sm12 xl6>
         <v-card max-height="430px" flat>
           <v-card-title>
-            <span class="title">Typical Plan</span>
+            <span class="title">
+              Typical Plan
+            </span>
           </v-card-title>
           <v-card-text>
             <v-img src="/images/plan.jpg" style="max-width:500px;height:auto;" />
@@ -13,7 +15,7 @@
       </v-flex>
       <v-flex xs12 md6 xl6 sm12>
         <v-card max-height="430px" flat>
-          <v-card-title></v-card-title>
+          <v-card-title />
           <v-card-text>
             <v-list>
               <v-list-tile v-for="msg in messages" :key="msg">
@@ -32,15 +34,17 @@
       </v-flex>
     </v-layout>
 
-    <br/><br/><br/>
-    <br/><br/><br/>
-    <v-divider></v-divider>
+    <br><br><br>
+    <br><br><br>
+    <v-divider />
 
     <v-layout row wrap>
       <v-flex md6 xs12 sm12 xl6>
         <v-card max-height="500px" flat>
           <v-card-title>
-            <span class="title">Parking Plan</span>
+            <span class="title">
+              Parking Plan
+            </span>
           </v-card-title>
           <v-card-text>
             <v-img src="/images/parkingPlan.png" style="max-width:400px;height:auto;" />
