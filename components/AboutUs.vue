@@ -3,7 +3,7 @@
     <v-card flat>
       <v-card-text>
         <h1 class="text-xs-center">
-          About Us
+          About Us 
         </h1>
         <br>
         <br>

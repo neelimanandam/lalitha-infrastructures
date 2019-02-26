@@ -3,6 +3,7 @@
     <dashboard />
     <about-us />
     <v-divider />
+    <v-divider />
     <specs />
     <v-divider />
     <team />

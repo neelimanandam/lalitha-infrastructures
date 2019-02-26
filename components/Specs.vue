@@ -6,11 +6,13 @@
       </h1>
     </v-card-text>
 
+    <plan />
+    
     <v-card flat>
       <v-layout row wrap>
         <v-flex xs12>
           <v-card flat>
-            <v-container v-bind="{ [`grid-list-${size}`]: true }" fluid>
+            <v-container fluid>
               <v-layout row wrap>
                 <v-flex
                   v-for="n in tabledata"
@@ -39,8 +41,12 @@
   </v-container>
 </template>
 <script>
+import Plan from '~/components/Plan'
 export default {
   name: 'Specs',
+  components: {
+    Plan
+  },
   data: function() {
     return {
       tabledata: [

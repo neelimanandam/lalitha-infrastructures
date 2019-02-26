@@ -17,14 +17,6 @@
         </v-carousel>
       </v-flex>
     </v-layout>
-    <v-spacer />
-    
-
-    <v-divider />
-
-   
-
-    <v-divider />
   </div>
 </template>
 <script>
