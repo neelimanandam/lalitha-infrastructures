@@ -18,6 +18,7 @@ import AboutUs from '~/components/AboutUs'
 import Specs from '~/components/Specs'
 import Team from '~/components/Team'
 import ContactUs from '~/components/ContactUs'
+
 export default {
   components: {
     Dashboard,

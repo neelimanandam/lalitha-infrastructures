@@ -53,20 +53,37 @@
       </v-flex>
       <v-flex xs12 md6 xl6 sm12>
         <v-card max-height="430px" flat>
-          <v-card-text>
-            <v-list>
-              <v-list-tile v-for="msg in messages" :key="msg">
-                <v-list-tile-avatar>
-                  <v-icon>done</v-icon>
-                </v-list-tile-avatar>
-                <v-list-tile-content>
-                  <span class="subheading">
-                    {{ msg }}
-                  </span>
-                </v-list-tile-content>
-              </v-list-tile>
-            </v-list>
-          </v-card-text>
+          <br>
+          <br>
+          <br>
+          <v-card-title class="title">
+            Area Statement
+          </v-card-title>
+          <table style="width:100%" border="1px">
+            <tr>
+              <th>Flat Nos</th>
+              <th>1</th>
+              <th>2</th>
+            </tr>
+            <tr>
+              <th>Type</th>
+              <th>2 BHK</th>
+              <th>3 BHK</th>
+            </tr>
+            <tr>
+              <th>Facing</th>
+              <th>West</th>
+              <th>East</th>
+            </tr>
+            <tr>
+              <th>Area in Sft</th>
+              <th>1445</th>
+              <th>1290</th>
+            </tr>
+          </table>
+          <v-icon height="50px" width="50px">
+            gps_fixed
+          </v-icon>
         </v-card>
       </v-flex>
     </v-layout>
