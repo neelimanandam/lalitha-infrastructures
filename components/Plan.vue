@@ -81,9 +81,9 @@
               <th>1290</th>
             </tr>
           </table>
-          <v-icon height="50px" width="50px">
-            gps_fixed
-          </v-icon>
+          <v-card-text>
+            <v-img src="/images/direction.jpg" width="200" height="auto" />
+          </v-card-text>
         </v-card>
       </v-flex>
     </v-layout>

@@ -15,15 +15,40 @@
           <v-card>
             <v-card-text>
               <GmapMap
-                :center="{lat:16.355242, lng:80.836730}"
-                :zoom="7"
+                :center="{lat:16.368970, lng:80.844170}"
+                :zoom="15"
                 map-type-id="terrain"
                 style="height:350px"
               >
                 <GmapMarker
-                  ref="Lalitha Infrastructures"
-                  :position="{lat:16.355242, lng:80.836730}"
-                />
+                  ref="Vijaya Lakshmi Vastralayam"
+                  :position="{lat:16.364368, lng:80.842876}"
+                  :clickable="true"
+                >
+                  <gmap-info-window >
+                    <info-content>
+                      Vijaya Lakshmi Vastralayam,
+                      <br>
+                      Main Road,
+                      <br>
+                      Vuyyuru
+                    </info-content>
+                  </gmap-info-window>
+                </GmapMarker>
+                <GmapMarker
+                  ref="vijaya durga electricals"
+                  :position="{lat:16.368970, lng:80.844170}"
+                >
+                <gmap-info-window>
+                    <info-content>
+                      Vijaya Durga Electricals,
+                      <br>
+                      Katur Road,
+                      <br>
+                      Vuyyuru
+                    </info-content>
+                  </gmap-info-window>
+                </GmapMarker>
               </GmapMap>
             </v-card-text>
           </v-card>
