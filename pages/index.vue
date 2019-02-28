@@ -16,7 +16,7 @@
 import Dashboard from '~/components/Dashboard'
 import AboutUs from '~/components/AboutUs'
 import Specs from '~/components/Specs'
-import Team from '~/components/Team'
+
 import ContactUs from '~/components/ContactUs'
 
 export default {
@@ -24,7 +24,7 @@ export default {
     Dashboard,
     AboutUs,
     Specs,
-    Team,
+
     ContactUs
   },
   layout: 'default'

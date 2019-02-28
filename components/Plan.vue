@@ -47,43 +47,31 @@
             </span>
           </v-card-title>
           <v-card-text>
-            <v-img src="/images/parkingPlan.png" style="max-width:400px;height:auto;" />
+            <v-img src="/images/parkingPlan.png" style="max-width:500px;height:auto;" />
           </v-card-text>
         </v-card>
       </v-flex>
       <v-flex xs12 md6 xl6 sm12>
-        <v-card max-height="430px" flat>
-          <br>
-          <br>
-          <br>
-          <v-card-title class="title">
-            Area Statement
+        <v-card max-height="500px" flat>
+          <v-card-title>
+            <span class="title">
+              Area Statement
+            </span>
           </v-card-title>
-          <table style="width:100%" border="1px">
-            <tr>
-              <th>Flat Nos</th>
-              <th>1</th>
-              <th>2</th>
-            </tr>
-            <tr>
-              <th>Type</th>
-              <th>2 BHK</th>
-              <th>3 BHK</th>
-            </tr>
-            <tr>
-              <th>Facing</th>
-              <th>West</th>
-              <th>East</th>
-            </tr>
-            <tr>
-              <th>Area in Sft</th>
-              <th>1445</th>
-              <th>1290</th>
-            </tr>
-          </table>
-          <v-icon height="50px" width="50px">
-            gps_fixed
-          </v-icon>
+          <v-card-text>
+            <v-data-table
+              :headers="headers"
+              :items="flatTypes"
+              class="elevation-1"
+              hide-actions
+            >
+              <template slot="items" slot-scope="props">
+                <td>{{ props.item.type }}</td>
+                <td>{{ props.item.facing }}</td>
+                <td>{{ props.item.sft }}</td>
+              </template>
+            </v-data-table>
+          </v-card-text>
         </v-card>
       </v-flex>
     </v-layout>
@@ -103,6 +91,23 @@ export default {
         'Excellent Ventilation for Healthy Life',
         'Water Supply through Bore-well',
         'Power back-up Generator'
+      ],
+      headers: [
+        { text: 'Type', value: 'type', sortable: false },
+        { text: 'Facing', value: 'facing', sortable: false },
+        { text: 'Area(Sft)', value: 'sft', sortable: false }
+      ],
+      flatTypes: [
+        {
+          type: '2 BHK',
+          facing: 'WEST',
+          sft: 1145
+        },
+        {
+          type: '3 BHK',
+          facing: 'EAST',
+          sft: 1290
+        }
       ]
     }
   }

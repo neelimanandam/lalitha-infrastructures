@@ -15,15 +15,47 @@
           <v-card>
             <v-card-text>
               <GmapMap
-                :center="{lat:16.355242, lng:80.836730}"
-                :zoom="7"
+                :center="{lat:16.368970, lng:80.844170}"
+                :zoom="15"
                 map-type-id="terrain"
                 style="height:350px"
               >
                 <GmapMarker
-                  ref="Lalitha Infrastructures"
-                  :position="{lat:16.355242, lng:80.836730}"
-                />
+                  ref="Vijaya Lakshmi Vastralayam"
+                  :position="{lat:16.364368, lng:80.842876}"
+                  :clickable="true"
+                  @click="openMap"
+                >
+                  <gmap-info-window>
+                    <info-content>
+                      Lalitha Infrastructures,
+                      <br>
+                      c/o Sri Vijaya Lakshmi Vastralayam,
+                      <br>
+                      Main Road,
+                      <br>
+                      Vuyyuru
+                    </info-content>
+                  </gmap-info-window>
+                </GmapMarker>
+                <GmapMarker
+                  ref="Vijaya Durga Electricals"
+                  :position="{lat:16.368970, lng:80.844170}"
+                  :clickable="true"
+                  @click="openMap"
+                >
+                  <gmap-info-window>
+                    <info-content>
+                      Lalitha Infrastructures,
+                      <br>
+                      c/o Vijaya Durga Electricals,
+                      <br>
+                      Katur Road,
+                      <br>
+                      Vuyyuru
+                    </info-content>
+                  </gmap-info-window>
+                </GmapMarker>
               </GmapMap>
             </v-card-text>
           </v-card>
@@ -43,7 +75,9 @@
                   Head Office
                 </span>
                 <br>
-                Sri Vijaya Lakshmi Vastralayam 
+                Lalitha Infrastructures,
+                <br>
+                c/o Sri Vijaya Lakshmi Vastralayam 
                 <br>
                 Main road 
                 <br>
@@ -56,12 +90,13 @@
               
               <p class="text-xs-center">
                 <br>
-                <br>
                 <span class="title">
                   Branch Office
                 </span>
                 <br>
-                Vijaya Durga Electricals 
+                Lalitha Infrastructures,
+                <br>
+                c/o Vijaya Durga Electricals 
                 <br>
                 Katur road 
                 <br>
@@ -78,7 +113,24 @@
   </div>
 </template>
 <script>
+import * as VueGoogleMaps from 'vue2-google-maps'
+import Vue from 'vue'
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyCZtdWUqRMcZz9MH0JLPKv7auufuknqGKE',
+    libraries: 'places'
+  }
+})
 export default {
-  name: 'ContactUs'
+  name: 'ContactUs',
+  methods: {
+    openMap: function() {
+      window.open(
+        'https://www.google.com/maps?ll=16.369299,80.84417&z=15&t=p&hl=en-US&gl=US&mapclient=apiv3',
+        '_blank'
+      )
+    }
+  }
 }
 </script>
