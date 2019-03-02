@@ -1,10 +1,11 @@
 <template>
   <v-flex>
     <v-card color="#FAFAFA" flat>
-   
       <v-card-text>
-          <p class="text-xs-center title">Quote of the Day</p>
-        <span class="subheading font-italic" >
+        <p class="text-xs-center title">
+          Quote of the Day
+        </p>
+        <span class="subheading font-italic">
           {{ quote }}
         </span>
       </v-card-text>
