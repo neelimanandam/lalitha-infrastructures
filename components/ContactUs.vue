@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container fluid>
-      <v-card flat>
+      <v-card color="#FAFAFA" flat>
         <v-card-text>
           <h1 class="text-xs-center">
             Contact Us
@@ -12,7 +12,7 @@
     <v-container fluid>
       <v-layout row wrap>
         <v-flex md6 xs12 sm12 xl6>
-          <v-card>
+          <v-card color="#FAFAFA" flat>
             <v-card-text>
               <GmapMap
                 :center="{lat:16.368970, lng:80.844170}"
@@ -66,7 +66,7 @@
           xl6
           sm12
         >
-          <v-card height="382px">
+          <v-card height="382px" color="#FAFAFA" flat>
             <v-card-text>
               <p class="text-xs-center">
                 <br>

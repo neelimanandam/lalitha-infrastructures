@@ -6,9 +6,9 @@
     <v-divider />
     <specs />
     <v-divider />
-    <team />
-    <v-divider />
     <contact-us />
+    <v-divider />
+    <daily-quotes />
   </div>
 </template>
 
@@ -16,7 +16,7 @@
 import Dashboard from '~/components/Dashboard'
 import AboutUs from '~/components/AboutUs'
 import Specs from '~/components/Specs'
-
+import DailyQuotes from '~/components/DailyQuotes'
 import ContactUs from '~/components/ContactUs'
 
 export default {
@@ -24,8 +24,8 @@ export default {
     Dashboard,
     AboutUs,
     Specs,
-
-    ContactUs
+    ContactUs,
+    DailyQuotes
   },
   layout: 'default'
 }
