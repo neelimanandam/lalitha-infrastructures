@@ -15,7 +15,7 @@
     <v-toolbar app>
       <v-toolbar-side-icon class="hidden-md-and-up" @click="drawer = !drawer" />
       <v-flex xs3 md1 sm2 xl1>
-        <v-img src="/icon.png" height="50px" width="50px" @click="clickMethod" style="cursor:pointer"/>
+        <v-img src="/icon.png" height="50px" width="50px" style="cursor:pointer" @click="clickMethod" />
       </v-flex>
       <v-flex xs9 md6 sm7 xl3>
         <span class="subheading font-weight-medium text-uppercase">

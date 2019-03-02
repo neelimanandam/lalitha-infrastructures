@@ -8,10 +8,10 @@
 
     <plan />
     
-    <v-card flat>
+    <v-card color="#FAFAFA" flat>
       <v-layout row wrap>
         <v-flex xs12>
-          <v-card flat>
+          <v-card color="#FAFAFA" flat>
             <v-container fluid>
               <v-layout row wrap>
                 <v-flex

@@ -2,7 +2,7 @@
   <v-container>
     <v-layout row wrap>
       <v-flex md6 xs12 sm12 xl6>
-        <v-card max-height="430px" flat>
+        <v-card max-height="430px" color="#FAFAFA" flat>
           <v-card-title>
             <span class="title">
               Typical Plan
@@ -14,7 +14,7 @@
         </v-card>
       </v-flex>
       <v-flex xs12 md6 xl6 sm12>
-        <v-card max-height="430px" flat>
+        <v-card max-height="430px" color="#FAFAFA" flat>
           <v-card-title />
           <v-card-text>
             <v-list>
@@ -40,7 +40,7 @@
 
     <v-layout row wrap>
       <v-flex md6 xs12 sm12 xl6>
-        <v-card max-height="500px" flat>
+        <v-card max-height="500px" color="#FAFAFA" flat>
           <v-card-title>
             <span class="title">
               Parking Plan
@@ -52,7 +52,7 @@
         </v-card>
       </v-flex>
       <v-flex xs12 md6 xl6 sm12>
-        <v-card max-height="500px" flat>
+        <v-card max-height="500px" color="#FAFAFA" flat>
           <v-card-title>
             <span class="title">
               Area Statement

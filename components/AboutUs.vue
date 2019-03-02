@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-card flat>
+    <v-card color="#FAFAFA" flat>
       <v-card-text>
         <h1 class="text-xs-center">
           About Us 
