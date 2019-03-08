@@ -72,6 +72,23 @@
               </template>
             </v-data-table>
           </v-card-text>
+          <br>
+          <p class="title">
+            Do you know this?
+          </p>
+          <v-slider
+            v-model="randomNumber"
+            color="orange"
+            label="Select a random number"
+            hint="Slide to know more!"
+            min="0"
+            :max="max"
+            thumb-label
+          />
+          <br>
+          <span v-if="randomNews" class="subheading">
+            {{ randomNews }}
+          </span>
         </v-card>
       </v-flex>
     </v-layout>
@@ -79,9 +96,13 @@
 </template>
 
 <script>
+import { getNews } from '~/api/randomNews'
 export default {
   data: function() {
     return {
+      randomNumber: 0,
+      randomNews: null,
+      max: 0,
       messages: [
         'Strategic Location',
         'Premium Quality Construction',
@@ -109,6 +130,29 @@ export default {
           sft: 1290
         }
       ]
+    }
+  },
+  watch: {
+    randomNumber: function() {
+      this.getRandomNews()
+    }
+  },
+  mounted: function() {
+    this.getRandomNews()
+  },
+  methods: {
+    getRandomNews: function() {
+      const vm = this
+      getNews().then(response => {
+        if (
+          response.data &&
+          response.data.articles &&
+          response.data.articles.length > 0
+        ) {
+          vm.max = response.data.articles.length - 1
+          vm.randomNews = response.data.articles[vm.randomNumber].title
+        }
+      })
     }
   }
 }
